@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 template <class t=int>
 class Node
@@ -137,7 +137,7 @@ t sll<t>::operator[](int i)
     if (i >= size)
     {
         cout << endl
-             << "Subscript is way to large." << endl;
+             << "Subscript Is Way To Large." << endl;
         exit(1);
     }
     Node<t> *temp = head;
@@ -183,6 +183,6 @@ int main()
     cout << "Comparing List 1 equal to List 2: " << (ll1 == ll2) << endl;
     cout << "Enter the subscript for finding a value in List 1: ";
     cin >> i;
-    cout << "The value at subscript " << i << " is : " << ll1[i] << endl;
+    cout << "The Value At Subscript " << i << " is : " << ll1[i] << endl;
     return 0;
 }
