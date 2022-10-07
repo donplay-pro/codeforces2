@@ -6,6 +6,7 @@ using namespace std;
 #define mp make_pair
 #define inc(i,a,b) for(int i=a;i<=b;i++)
 #define dec(i,a,b) for(int i=a;i>=b;i--)
+//
 int main()
 {
     int c,a,j=1;
