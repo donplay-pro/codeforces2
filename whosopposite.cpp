@@ -10,7 +10,7 @@ int main()
 {
     int t,a,b,c,n;
     cin>>t;
-    vector<vector<int>> arr(10000,vector<int> (2,0));
+    vector<vector<int>> array(10000,vector<int> (2,0));
     inc(i,0,t)
     {
         cin>>a>>b>>c;
@@ -25,11 +25,11 @@ int main()
         }
     }
     inc(i,0,t){
-        if(arr[i][0]>=arr[i][1]){
-            if(arr[i][0]>=2*arr[i][1])
-            cout<<arr[i][0]/2 + arr[i][1]<<endl;
+        if(array[i][0]>=arr[i][1]){
+            if(array[i][0]>=2*arr[i][1])
+            cout<<array[i][0]/2 + arr[i][1]<<endl;
             else
-            cout<<arr[i][1]-arr[i][0]/2<<endl;
+            cout<<array[i][1]-arr[i][0]/2<<endl;
         }
         else
         cout<<-1<<endl;
