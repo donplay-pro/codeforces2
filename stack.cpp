@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 template <class t>
 class stack
@@ -120,7 +120,7 @@ int main(void)
             x = 0;
             break;
         default:
-            cout << "Invalid choice try again\n";
+            cout << "Invalid Choice Please Try Again\n";
         }
     } while (x);
     return 0;
