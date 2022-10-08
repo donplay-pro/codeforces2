@@ -8,17 +8,26 @@ using namespace std;
 #define dec(i,a,b) for(int i=a;i>b;i--)
 int main()
 {
-    int best =0,sum = 0,n,a;
+    int best =0
+    int sum = 0,n,a;
+    
     vector<int> arr;
+    
     cin>>n;
+    
     inc(i,0,n){
         cin>>a;
+        
         arr.push_back(a);
     }
+    
     inc(k,0,n){
         sum = max(arr[k],sum+arr[k]);
+        
         best = max(best,sum);
     }
+    
     cout<<best<<"\n";
+    
     return 0;
 }
