@@ -21,7 +21,9 @@ public:
     bool operator>(const set &s);
     bool operator>=(const set &s);
 };
+
 set ::set(const set &s)
+
 {
     size = s.size;
     ptr = new int[size];
