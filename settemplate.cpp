@@ -56,7 +56,7 @@ public:
     bool operator<=(const set<T> &s);
     bool operator>(const set<T> &s);
     bool operator>=(const set<T> &s);
-};
+}
 
 template <class T>
 set<T>::set(const set<T> &s)
