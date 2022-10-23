@@ -12,67 +12,85 @@ public:
     void operator=(const complex &c);
     bool operator==(const complex &c);
     bool operator!=(const complex &c);
-   // complex operator!();
+        // complex operator!();
     complex operator+(const complex &c);
     complex operator-(const complex &c);
     complex operator*(const complex &c);
     complex operator/(const complex &c);
-};
+}
+
 double complex ::operator[](int i)
+
 {
     if (i == 0)
         return real;
     else
         return img;
 }
+
 void complex ::operator=(const complex &c)
+
 {
     real = c.real;
     img = c.img;
 }
+
 bool complex::operator==(const complex &c)
+
 {
     if (real == c.real && img == c.img)
         return true;
     else
         return false;
 }
+
 bool complex::operator!=(const complex &c)
+
 {
     if (real == c.real && img == c.img)
         return false;
     else
         return true;
 }
+
 complex complex::operator!()
+
 {
     complex conj;
     conj.real = real;
     conj.img = -img;
     return conj;
 }
+
 complex complex::operator+(const complex &c)
+
 {
     complex sum;
     sum.real = real + c.real;
     sum.img = img + c.img;
     return sum;
 }
+
 complex complex::operator-(const complex &c)
+
 {
     complex sum;
     sum.real = real - c.real;
     sum.img = img - c.img;
     return sum;
 }
+
 complex complex::operator*(const complex &c)
+
 {
     complex mult;
     mult.real = real * c.real - img * c.img;
     mult.img = real * c.img + img * c.real;
     return mult;
 }
+
 complex complex::operator/(const complex &c)
+
 {
     complex div;
     div.real = (real * c.real + img * c.img) / (c.real * c.real + c.img * c.img);
@@ -81,6 +99,7 @@ complex complex::operator/(const complex &c)
 }
 
 istream &operator>>(istream &in, complex &c)
+
 {
     cout << "Enter real part: ";
     in >> c.real;
@@ -88,12 +107,16 @@ istream &operator>>(istream &in, complex &c)
     in >> c.img;
     return in;
 }
+
 ostream &operator<<(ostream &out, complex &c)
+
 {
     out << c.real << " + " << c.img << "i" << endl;
     return out;
 }
+
 int main()
+
 {
     complex c1, c2, c3, c4, c5, c6, c7;
     cin >> c1;
