@@ -24,6 +24,7 @@ int main()
         if(alternate.count(b[i])){
             cout<<"Found!!!"<<endl;
             return 0;
+            //545
         }
     }
     cout<<"Not Found!!!"<<endl;
