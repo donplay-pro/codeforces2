@@ -6,6 +6,7 @@ public:
     int data;
     Node *next;
 };
+//rahul
 
 class sll
 {
