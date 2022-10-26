@@ -30,6 +30,7 @@ int main()
             cout<<array[i][0]/2 + arr[i][1]<<endl;
             else
             cout<<array[i][1]-arr[i][0]/2<<endl;
+            //5
         }
         else
         cout<<-1<<endl;
