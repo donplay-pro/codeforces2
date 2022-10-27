@@ -10,41 +10,49 @@ public:
     friend istream &operator>>(istream &in, fraction &f);
     friend ostream &operator<<(ostream &out, fraction &f);
     friend int gcd(int x, int y);
+    
     int operator[](int i);
     void operator=(const fraction &f);
     bool operator==(const fraction &f);
     bool operator!=(const fraction &f);
     bool operator<(const fraction &f);
     bool operator>(const fraction &f);
+    
     fraction operator*();
     fraction operator+(const fraction &f);
     fraction operator-(const fraction &f);
     fraction operator*(const fraction &f);
     fraction operator/(const fraction &f);
 };
+
 int gcd(int x, int y)
 {
     int temp, a, b;
     x = labs(x);
     y = labs(y);
     if (x < y)
+        
     {
         a = x;
         b = y;
     }
+    
     else
     {
         a = y;
         b = x;
     }
+    
     while (b % a != 0)
     {
         temp = a;
         a = b % a;
         b = temp;
     }
+    
     return a;
 }
+
 int fraction ::operator[](int i)
 {
     if (i == 0)
@@ -52,11 +60,13 @@ int fraction ::operator[](int i)
     else
         return denom;
 }
+
 void fraction ::operator=(const fraction &f)
 {
     num = f.num;
     denom = f.denom;
 }
+
 fraction fraction::operator*()
 {
     fraction normal;
@@ -66,11 +76,13 @@ fraction fraction::operator*()
         normal.denom = labs(denom / d);
         normal.num = labs(num / d);
     }
+    
     else
     {
         normal.num = num / d;
         normal.denom = denom / d;
     }
+    
     if (normal.denom < 0)
     {
         normal.num = -normal.num;
@@ -79,6 +91,7 @@ fraction fraction::operator*()
 
     return normal;
 }
+
 bool fraction::operator==(const fraction &f)
 {
     fraction temp1, temp2;
@@ -91,6 +104,7 @@ bool fraction::operator==(const fraction &f)
 
     return false;
 }
+
 bool fraction::operator!=(const fraction &f)
 {
     return !(*this == f);
@@ -107,6 +121,7 @@ bool fraction ::operator<(const fraction &f)
     else
         return false;
 }
+
 bool fraction ::operator>(const fraction &f)
 {
     fraction temp1, temp2;
@@ -119,6 +134,7 @@ bool fraction ::operator>(const fraction &f)
     else
         return false;
 }
+
 fraction fraction::operator+(const fraction &f)
 {
     fraction sum;
@@ -127,6 +143,7 @@ fraction fraction::operator+(const fraction &f)
     sum = *sum;
     return sum;
 }
+
 fraction fraction::operator-(const fraction &f)
 {
     fraction sub;
@@ -135,6 +152,7 @@ fraction fraction::operator-(const fraction &f)
     sub = *sub;
     return sub;
 }
+
 fraction fraction::operator*(const fraction &f)
 {
     fraction mult;
@@ -143,6 +161,7 @@ fraction fraction::operator*(const fraction &f)
     mult = *mult;
     return mult;
 }
+
 fraction fraction::operator/(const fraction &f)
 {
     fraction div;
@@ -166,6 +185,7 @@ istream &operator>>(istream &in, fraction &f)
 
     return in;
 }
+
 ostream &operator<<(ostream &out, fraction &f)
 {
     out << "(" << f.num << ")/(" << f.denom << ")" << endl;
