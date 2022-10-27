@@ -12,6 +12,7 @@ private:
     {
         return (top == -1);
     }
+    
     int isfull(void)
     {
         return (top == (size - 1));
@@ -25,11 +26,13 @@ public:
         a = new t[size];
         top = -1;
     }
+    
     ~stack(void)
     {
         cout << "The stack is no more:" << endl;
         delete[] a;
     }
+    
     void create(int s)
     {
         if (s > size)
@@ -37,6 +40,7 @@ public:
             printf("\nError number of elements greater than stack size\n");
             return;
         }
+        
         cout << "Enter the elements:" << endl;
         t ele;
         for (int i = 0; i < s; i++)
@@ -45,6 +49,7 @@ public:
             a[++top] = ele;
         }
     }
+    
     void push()
     {
         if (!isfull())
@@ -53,11 +58,13 @@ public:
             cin >> ele;
             a[++top] = ele;
         }
+        
         else
         {
             cout << "\nStack Overflow\n";
         }
     }
+    
     t pop(void)
     {
         if (!isempty())
@@ -65,12 +72,14 @@ public:
             t x = a[top--];
             return x;
         }
+        
         else
         {
             cout << "\nStack Underflow\n";
             return -1;
         }
     }
+    
     void display(void)
     {
         cout << "Displaying Stack: \n";
@@ -122,6 +131,9 @@ int main(void)
         default:
             cout << "Invalid Choice Please Try Again\n";
         }
-    } while (x);
+        
+    }
+    
+    while (x);
     return 0;
 }
